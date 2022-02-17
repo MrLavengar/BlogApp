@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
+  root to: 'homepage#index'
   get 'homepage/index'
   get 'homepage/about'
-  get 'home/index'
-  get 'home/about'
   resources :posts
   resources :blogs
   resources :users
