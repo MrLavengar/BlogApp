@@ -14,7 +14,7 @@
     - @posts.each do |post|
       %tr
         %td= post.title
-        %td= post.body
+        %td= post.body[0..50] + "..."
         %td= post.blog.title
         %td= link_to 'Show', post
         %td= link_to 'Edit', edit_post_path(post)
