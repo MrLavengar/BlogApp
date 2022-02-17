@@ -13,7 +13,7 @@
     - @blogs.each do |blog|
       %tr
         %td= blog.title
-        %td= blog.user
+        %td= blog.user.login
         %td= link_to 'Show', blog
         %td= link_to 'Edit', edit_blog_path(blog)
         %td= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }
