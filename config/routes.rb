@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'homepage/index'
+  get 'homepage/about'
+  get 'home/index'
+  get 'home/about'
   resources :posts
   resources :blogs
   resources :users
