@@ -1,10 +1,15 @@
 %p#notice= notice
 
+%h1
+  %b Blog title:
+  = @blog.title.capitalize
+
+-if @posts
+  %h3 Posts
+  -@posts.each do |post|
+    %p=link_to post.title.capitalize, post_path(post)
 %p
-  %b Title:
-  = @blog.title
-%p
-  %b User:
+  %b Author:
   = @blog.user.login
 
 = link_to 'Edit', edit_blog_path(@blog)
